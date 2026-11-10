@@ -1,0 +1,19 @@
+{
+  "timezone": "Europe/London",
+  "finance_max_required_years": 2,
+  "include_uk_remote": false,
+  "sources": {
+    "Monzo": "https://job-boards.greenhouse.io/monzo",
+    "Triodos": "https://careers.triodos.com/search/?q=&locationsearch=london&searchResultView=LIST",
+    "Lloyds": "https://www.lloydsbankinggroup.com/careers/job-search.html?f=SearchTerm:!allLocation:London!jobCategory:!workerType:!postedDate:&p=0",
+    "Starling": "https://www.starlingbank.com/careers/#jobs",
+    "Nationwide": "https://nationwide-jobs.co.uk/find?lat=51.5072178&lon=-0.1275862&distance=200mi&location=London%2C+UK",
+    "NatWest": "https://jobs.natwestgroup.com/search/jobs/in/london/country/united-kingdom"
+  },
+  "marketing_include": ["performance", "affiliate", "web", "product", "ppc", "paid media", "paid social", "paid search"],
+  "marketing_exclude": ["seo", "crm", "email", "public relations", "pr", "communications"],
+  "excluded_marketing_levels": ["lead", "head"],
+  "finance_domains": ["finance", "financial", "accounting", "accountant", "audit", "tax", "treasury", "credit", "risk", "investment", "markets", "corporate banking"],
+  "finance_exclude": ["compliance", "financial crime", "fincrime", "business development", "sales", "business analyst", "operations", "software", "engineer", "developer"],
+  "early_career_terms": ["junior", "graduate", "internship", "intern", "apprentice", "apprenticeship", "trainee", "early careers", "entry level"]
+}
