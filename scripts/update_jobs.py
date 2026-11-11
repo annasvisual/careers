@@ -83,7 +83,7 @@ EXTRACT = r"""({source}) => {
    const url=a.href;
    let valid = source==='Lloyds' ? /workday-job\.\d+\.html/.test(url)
      : source==='Nationwide' ? /\/jobs\/[^/]+-\d+/.test(url)
-     : source==='Starling' ? /apply\.workable\.com\/.*(?:\/j\/|\/j$)/.test(url)
+     : source==='Starling' ? new URL(url).hostname === "apply.workable.com" && /^\/(?:[^/]+\/)?j\/[^/]+\/?$/.test(new URL(url).pathname)
      : source==='NatWest' ? /\/jobs\/\d+-/.test(url)
      : /\/job\//.test(url);
    if(!valid) continue;
@@ -140,9 +140,20 @@ async def collect(context, source, url, config):
         normalized = [{'id':f"Monzo:{j['id']}", 'source':source, 'title':j['title'], 'url':j['absolute_url'],
                        'location':j['location']['name'], 'description':re.sub('<[^>]+>', ' ', j.get('content', ''))} for j in jobs]
         return normalized
+    from playwright.async_api import TimeoutError as PlaywrightTimeoutError
+
     page = await context.new_page()
     try:
         await page.goto(url, wait_until='domcontentloaded', timeout=60000)
+        if source in {'Nationwide', 'Lloyds'}:
+            consent = page.get_by_role('button', name={
+                'Nationwide': 'Allow essential cookies only',
+                'Lloyds': 'Reject all',
+            }[source], exact=True)
+            try:
+                await consent.first.click(timeout=3500)
+            except PlaywrightTimeoutError:
+                pass
         selector = {'Lloyds':'a[href*="workday-job."]', 'Starling':'a[href*="apply.workable.com"]',
                     'Nationwide':'a[href*="/jobs/"]', 'NatWest':'a[href*="/jobs/"]',
                     'Triodos':'a[href*="/job/"]'}[source]
