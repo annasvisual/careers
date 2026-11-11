@@ -7,7 +7,7 @@
 *{box-sizing:border-box}body{margin:0;background:#f5f3ed;color:#151515;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:684px;margin:auto;padding:48px 32px}h1{font-size:32px;line-height:1.1;font-weight:850;letter-spacing:-1.6px;margin:0 0 8px}.meta{font-size:14px;font-weight:600;margin:0;color:#40403d}header{border-bottom:4px solid #151515;padding-bottom:28px}section{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:28px 0;border-bottom:2px solid #c9c7be}h2{font-size:20px;font-weight:800;letter-spacing:-.6px;margin:0;font-variant-numeric:tabular-nums}ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}a{color:inherit;font-size:18px;font-weight:750;letter-spacing:-.35px;text-decoration:none;overflow-wrap:anywhere}a:hover{text-decoration:underline}p{margin:0}.empty{color:#484842;font-weight:600}.warning{color:#8a360c;font-size:14px;font-weight:600;margin-top:12px}.notice{padding:28px 0}footer{margin-top:25px;color:#56564f;font-size:12px}small{font-size:12px}@media(max-width:440px){main{padding:28px 18px}section{grid-template-columns:1fr;gap:10px}}
 </style>
 </head>
-<body><main><header><h1>Bank jobs</h1><p class="meta">Marketing · Junior product · Early careers finance</p></header><div id="feed" aria-live="polite"><p class="notice">Loading vacancies…</p></div><footer id="updated"></footer></main>
+<body><main><header><h1>Bank jobs</h1><p class="meta">Marketing · Junior product &amp; UX · Early careers finance</p></header><div id="feed" aria-live="polite"><p class="notice">Loading vacancies…</p></div><footer id="updated"></footer></main>
 <script>
 const feed=document.getElementById('feed');
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n};
@@ -18,6 +18,18 @@ function render(data){
  feed.replaceChildren();
  const days=[...data.days].sort((a,b)=>b.date.localeCompare(a.date));
  if(!days.length){feed.append(el('p','Tracking starts after the first scheduled check.','notice'));return}
+ const current=Object.entries(data.current||{});
+ if(current.length){
+  const section=el('section');section.append(el('h2','Open now'));
+  const content=el('div'),list=el('ul');
+  for(const [source,snapshot] of current){
+   const stale=Object.hasOwn(days[0].errors||{},source);
+   const date=snapshot.checked_at.slice(0,10);
+   for(const job of snapshot.jobs)list.append(el('li',`${source} — ${job.title}${stale?' (last seen '+dateLabel(date)+')':''}`));
+  }
+  content.append(list.childElementCount?list:el('p','No matching vacancies in the latest available lists.','empty'));
+  section.append(content);feed.append(section);
+ }
  let previousYear=null;
  for(let i=0;i<days.length;i++){
   const d=days[i];let end=d.date;
@@ -29,7 +41,7 @@ function render(data){
   if(d.jobs.length){const list=el('ul');for(const j of d.jobs){list.append(el('li',`${j.source} — ${j.title}`))}content.append(list)}
   const failed=Object.keys(d.errors||{});
   if(!d.jobs.length&&!failed.length&&!(d.baseline_sources||[]).length)content.append(el('p','No new vacancies','empty'));
-  if((d.baseline_sources||[]).length)content.append(el('p',`Initial check: ${d.baseline_sources.join(', ')}. Existing vacancies saved; new openings will appear from the next check.`, 'meta'));
+  if((d.baseline_sources||[]).length)content.append(el('p',`Initial check: ${d.baseline_sources.join(', ')}. New openings will be listed by date after this check.`, 'meta'));
   if(failed.length)content.append(el('p',`Check incomplete: ${failed.join(', ')}.`, 'warning'));
   section.append(content);feed.append(section);
  }

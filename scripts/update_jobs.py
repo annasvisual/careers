@@ -21,7 +21,7 @@ def matches(job, config):
         junior_product = False
     else:
         junior_product = phrase(title, 'junior') and phrase(title, 'product')
-    if junior_product:
+    if junior_product or (phrase(title, 'ux designer') and not any(phrase(title, t) for t in ['lead', 'head', 'director', 'senior', 'principal', 'staff'])):
         return True
     marketing = ('marketing' in title or any(phrase(title, t) for t in ['ppc', 'paid media', 'paid social', 'paid search', 'affiliate']))
     if marketing:
@@ -37,12 +37,18 @@ def matches(job, config):
 def merge(state, results, errors, day, timestamp):
     """Baseline each source independently; retrying a day preserves its new jobs."""
     state.setdefault('initialized_sources', [])
+    current = state.setdefault('current', {})
     record = next((d for d in state['days'] if d['date'] == day), None)
     if record is None:
         record = {'date': day, 'jobs': [], 'errors': {}, 'baseline_sources': []}
         state['days'].append(record)
     existing = {j['id'] for j in record['jobs']}
     for source, jobs in results.items():
+        current[source] = {
+            'checked_at': timestamp,
+            'jobs': list({job['id']: {'source': source, 'title': job['title']}
+                          for job in jobs if job.get('selected', True)}.values()),
+        }
         baseline = source not in state['initialized_sources']
         if baseline:
             state['initialized_sources'].append(source)

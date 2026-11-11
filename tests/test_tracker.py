@@ -20,6 +20,8 @@ class Filters(unittest.TestCase):
             self.assertFalse(t.matches(job(title),C),title)
     def test_junior(self):
         self.assertTrue(t.matches(job('Junior Product Designer'),C))
+        self.assertTrue(t.matches(job('UX Designer - 12 Month FTC'),C))
+        self.assertFalse(t.matches(job('Senior UX Designer'),C))
         self.assertTrue(t.matches(job('Finance Graduate'),C))
         self.assertFalse(t.matches(job('Finance Analyst'),C))
         self.assertFalse(t.matches(job('Finance Analyst',description='This is an entry-level position'),C))
@@ -45,6 +47,17 @@ class History(unittest.TestCase):
         self.assertEqual(len(s['days'][0]['jobs']),1)
         t.merge(s,{'Monzo':[b]}, {},'2026-11-12','now')
         self.assertEqual(s['days'][0]['jobs'],[])
+    def test_current_list_includes_baseline_and_updates_only_successes(self):
+        s={'seen':{},'days':[],'initialized_sources':['Monzo']}
+        a,b=job('UX Designer - 12 Month FTC'),job('Web Developer')
+        b['selected']=False
+        t.merge(s,{'Monzo':[a,b]}, {},'2026-11-10','first')
+        self.assertEqual(s['current']['Monzo']['jobs'],[{'source':'Monzo','title':a['title']}])
+        t.merge(s,{}, {'Monzo':'timeout'},'2026-11-11','second')
+        self.assertEqual(s['current']['Monzo']['checked_at'],'first')
+        t.merge(s,{'Monzo':[b]}, {},'2026-11-11','third')
+        self.assertEqual(s['current']['Monzo']['jobs'],[])
+
     def test_nonmatching_ids_still_remembered(self):
         s={'seen':{},'days':[],'initialized_sources':['Monzo']}
         a=job('Web Developer');a['selected']=False
