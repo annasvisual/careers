@@ -1,1 +1,528 @@
-{"schema_version":1,"seen":{},"days":[],"last_checked":null}
+{
+  "schema_version": 1,
+  "seen": {
+    "Monzo:8281171": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7343996": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6635595": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8365302": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8245673": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8331328": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8023162": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8264501": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8133342": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8258208": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8336726": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8146871": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7194922": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:5758065": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7825424": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8025854": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:5018066": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8356553": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7904675": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8336434": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6369658": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6758088": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8370845": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8288562": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8200681": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355179": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355625": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355488": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355249": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8354936": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7775842": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7966820": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8358652": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355433": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6674282": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6635837": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8092745": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6180814": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8330467": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6394676": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8358920": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8336327": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8378844": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8164092": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8225870": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8225843": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8331241": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7996955": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8365388": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8367351": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8288904": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7732437": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7861991": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8121253": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6656737": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6036797": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8083280": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8379323": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6758449": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6656228": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6636147": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8232732": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8222576": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8172921": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8359155": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8356252": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Triodos:/job/Quality-Assurance-Officer/892-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Local-Content-Marketeer-TBES-%28Temporal%29/998-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Customer-Contact-Co-worker/1040-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Application-Services-Engineer/889-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Senior-Regulatory-Reporting-Manager-9-Month-FTC/1030-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Relationship-Manager-Project-Finance/1037-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Financing-Specialist-Sustainable-Property/774-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Analyst-Alert-Handling-&amp;-Investigations-Co-worker-12-Month-FTC/1029-en_US": {
+      "first_seen": "2026-11-11",
+      "source": "Triodos"
+    },
+    "Starling:/j/4A1A00B7C8": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/B5E8381052": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/414C1BEEB2": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/98D6544EB3": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/452B7C7C8A": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/2932779F8D": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/4C2497A3A0": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/A911C892D6": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/7D15D4999C": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/CEF77CC40E": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/8BA7E308CC": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/5108328992": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/2D1F115847": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/1A0C6E5147": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/DB88F15D29": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/8E874AA206": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/498E1D2CF7": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/DDDBAB9997": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/B7C83ED223": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/5C0C4DAAD7": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/AAB5597D78": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/C8DD3020FA": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/0A13F0BEE0": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/81904DD41D": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/A57043FDA8": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/35703C4E86": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/B9C68DE2AB": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/05D7BED949": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/1D8E055437": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/EB69241DF2": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/B4BAF426DF": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/8B0D88C52C": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/5B969F290C": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/D10215A026": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/953817614A": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/139C0B8CE2": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/7F8C6F39DE": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/4F1A58C8DC": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/6E948EA5B4": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/53EB1BBEBB": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/B92A6598B3": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/EE760F35C5": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/0CAAF57346": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/0334E87163": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/5D5584B013": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/6F47B55F2F": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/71AEFBB712": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/143E344B3C": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/288875C2F2": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/73802C665F": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    },
+    "Starling:/j/6E4985765B": {
+      "first_seen": "2026-11-11",
+      "source": "Starling"
+    }
+  },
+  "days": [
+    {
+      "date": "2026-11-11",
+      "jobs": [],
+      "errors": {
+        "Lloyds": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"workday-job.\\\"]\").first\n",
+        "Nationwide": "No readable vacancy cards",
+        "NatWest": "Career listing returned HTTP 403"
+      },
+      "baseline_sources": [
+        "Monzo",
+        "Triodos",
+        "Starling"
+      ],
+      "checked_at": "2026-11-11T18:29:43.542398+00:00"
+    }
+  ],
+  "last_checked": "2026-11-11T18:29:43.542398+00:00",
+  "initialized_sources": [
+    "Monzo",
+    "Triodos",
+    "Starling"
+  ]
+}
