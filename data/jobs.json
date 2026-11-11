@@ -464,6 +464,18 @@
     "Starling:/j/6E4985765B": {
       "first_seen": "2026-11-11",
       "source": "Starling"
+    },
+    "Monzo:8281171": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8378844": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8379323": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
     }
   },
   "days": [
@@ -480,10 +492,10 @@
         "Monzo",
         "Starling"
       ],
-      "checked_at": "2026-11-11T11:25:23.411444+00:00"
+      "checked_at": "2026-11-11T17:02:22.267844+00:00"
     }
   ],
-  "last_checked": "2026-11-11T11:25:23.411444+00:00",
+  "last_checked": "2026-11-11T17:02:22.267844+00:00",
   "initialized_sources": [
     "Monzo",
     "Starling"
