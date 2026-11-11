@@ -1,7 +1,7 @@
 name: Check vacancies and publish
 on:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 2,8,14,20 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     environment:
       name: github-pages
