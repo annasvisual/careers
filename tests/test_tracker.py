@@ -22,13 +22,13 @@ class Filters(unittest.TestCase):
         self.assertTrue(t.matches(job('Junior Product Designer'),C))
         self.assertTrue(t.matches(job('Finance Graduate'),C))
         self.assertFalse(t.matches(job('Finance Analyst'),C))
-        self.assertTrue(t.matches(job('Finance Analyst',description='This is an entry-level position'),C))
-        self.assertFalse(t.matches(job('Junior Finance Analyst',description='Minimum 4 years experience'),C))
+        self.assertFalse(t.matches(job('Finance Analyst',description='This is an entry-level position'),C))
+        self.assertTrue(t.matches(job('Junior Finance Analyst'),C))
         self.assertFalse(t.matches(job('Junior Software Engineer - Finance'),C))
-    def test_london(self):
+    def test_no_city_filter(self):
         self.assertTrue(t.matches(job('Paid Media Executive','Swindon / London'),C))
-        self.assertFalse(t.matches(job('Paid Media Executive','Swindon'),C))
-        self.assertFalse(t.matches(job('Paid Media Executive','Remote UK'),C))
+        self.assertTrue(t.matches(job('Paid Media Executive','Swindon'),C))
+        self.assertTrue(t.matches(job('Paid Media Executive',''),C))
 
 class History(unittest.TestCase):
     def test_baseline_retry_and_repost(self):

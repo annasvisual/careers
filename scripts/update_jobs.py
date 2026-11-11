@@ -17,11 +17,6 @@ def phrase(text, term):
 
 def matches(job, config):
     title = job['title'].lower()
-    location = job.get('location', '').lower()
-    description = job.get('description', '').lower()
-    if not phrase(location, 'london'):
-        if not (config['include_uk_remote'] and re.search(r'remote.*(?:uk|united kingdom)', location)):
-            return False
     if any(phrase(title, t) for t in ['lead', 'head', 'director', 'senior', 'principal', 'staff']):
         junior_product = False
     else:
@@ -36,16 +31,7 @@ def matches(job, config):
         return False
     if not any(phrase(title, t) for t in config['finance_domains']):
         return False
-    early = any(phrase(title, t) for t in config['early_career_terms'])
-    # Analyst/Associate alone is not sufficient evidence of an entry-level role.
-    if not early and re.search(r'\b(?:analyst|associate)\b', title):
-        early = bool(re.search(r'entry[- ]level|no (?:prior )?experience|0\s*[-–]\s*[12]\s*years|up to [12] years', description))
-    if not early:
-        return False
-    required = re.findall(r'(?:at least|minimum(?: of)?|requires?|must have)\s*(\d+)\+?\s*years', description)
-    required += re.findall(r'(\d+)\+?\s*years?\s*(?:of\s*)?(?:relevant |professional |previous )?experience', description)
-    ranges = re.findall(r'(\d+)\s*[-–]\s*\d+\s*years?\s*(?:of\s*)?(?:relevant |professional )?experience', description)
-    return not any(int(n) > config['finance_max_required_years'] for n in required + ranges)
+    return any(phrase(title, t) for t in config['early_career_terms'])
 
 
 def merge(state, results, errors, day, timestamp):
@@ -103,48 +89,25 @@ EXTRACT = r"""({source}) => {
 }"""
 
 
-async def detail(context, source, item):
-    page = await context.new_page()
-    try:
-        await page.goto(item['url'], wait_until='domcontentloaded', timeout=60000)
-        await page.locator('h1').first.wait_for(timeout=25000)
-        # Career templates sometimes populate the description after the heading.
-        await page.wait_for_function("document.body.innerText.length > 1500", timeout=25000)
-        body = await page.locator('body').inner_text()
-        title = (await page.locator('h1').first.inner_text()).strip()
-        if re.search(r'not found|no longer available|job (?:has been )?closed', title, re.I):
-            raise ValueError('Vacancy detail unavailable')
-        # Restrict location evidence to the job header, before related jobs/footer.
-        header = re.split(r'Job description|What you.ll be doing|About (?:the role|us)|Description', body, maxsplit=1, flags=re.I)[0]
-        if source == 'Nationwide':
-            m = re.search(r'Location\s*\n([\s\S]*?)\nSalary', header, re.I)
-            location = m.group(1) if m else ''
-        else:
-            location = header
-        return {'id': source + ':' + urlparse(item['url']).path.rstrip('/'), 'source': source,
-                'title': title or item['title'], 'url': item['url'],
-                'location': location[:4000], 'description': body[:45000]}
-    finally:
-        await page.close()
-
-
 async def collect(context, source, url, config):
     if source == 'Monzo':
-        response = await context.request.get('https://boards-api.greenhouse.io/v1/boards/monzo/jobs?content=true', timeout=60000)
+        response = await context.request.get('https://boards-api.greenhouse.io/v1/boards/monzo/jobs', timeout=60000)
         if not response.ok:
             raise ValueError(f'Greenhouse HTTP {response.status}')
         payload = await response.json()
         jobs = payload.get('jobs')
         if not isinstance(jobs, list) or not jobs:
             raise ValueError('Empty or invalid Greenhouse response')
-        normalized = [{'id':f"Monzo:{j['id']}", 'source':source, 'title':j['title'], 'url':j['absolute_url'],
-                       'location':j['location']['name'], 'description':re.sub('<[^>]+>', ' ', j.get('content', ''))} for j in jobs]
+        normalized = [{'id':f"Monzo:{j['id']}", 'source':source, 'title':j['title'], 'url':j['absolute_url']} for j in jobs]
         return normalized
     from playwright.async_api import TimeoutError as PlaywrightTimeoutError
 
     page = await context.new_page()
+    response = None
     try:
-        await page.goto(url, wait_until='domcontentloaded', timeout=60000)
+        response = await page.goto(url, wait_until='domcontentloaded', timeout=60000)
+        if response and response.status >= 400:
+            raise ValueError(f'Career listing returned HTTP {response.status}')
         if source in {'Nationwide', 'Lloyds'}:
             consent = page.get_by_role('button', name={
                 'Nationwide': 'Allow essential cookies only',
@@ -176,16 +139,28 @@ async def collect(context, source, url, config):
             await page.wait_for_function("old => {const links=Array.from(document.querySelectorAll('a[href]')).map(a=>a.href);return old.some(u=>!links.includes(u));}", arg=old_urls, timeout=25000)
         else:
             raise ValueError('Pagination limit reached')
-        normalized = []
-        for item in items.values():
-            # Fetch only plausible titles, but retain IDs for every seen listing.
-            candidate = {'title':item['title'], 'location':'London', 'description':'entry level'}
-            if matches(candidate, config):
-                normalized.append(await detail(context, source, item))
-            else:
-                normalized.append({'id':source+':'+urlparse(item['url']).path.rstrip('/'), 'source':source,
-                                   'title':item['title'], 'url':item['url'], 'location':'', 'description':''})
-        return normalized
+        return [{'id':source+':'+urlparse(item['url']).path.rstrip('/'),
+                 'source':source, 'title':item['title'], 'url':item['url']}
+                for item in items.values()]
+    except Exception:
+        try:
+            diagnostic = await page.evaluate(r'''() => {
+                const links = Array.from(document.querySelectorAll('a[href]'));
+                const body = document.body?.innerText || '';
+                return {
+                    title: document.title.slice(0, 150),
+                    totalLinks: links.length,
+                    vacancyLikeLinks: links.filter(a => /\/(jobs?|j)\/|workday-job\./i.test(a.href)).length,
+                    emptyMessage: /no jobs found|no vacancies|no results found/i.test(body),
+                    accessMessage: /access denied|verify you are human|request blocked/i.test(body),
+                };
+            }''')
+            diagnostic['httpStatus'] = response.status if response else None
+            diagnostic['finalPath'] = urlparse(page.url).path
+            print(f'{source}: LISTING DIAGNOSTICS {json.dumps(diagnostic, ensure_ascii=True)}', flush=True)
+        except Exception:
+            print(f'{source}: listing diagnostics unavailable', flush=True)
+        raise
     finally:
         await page.close()
 
