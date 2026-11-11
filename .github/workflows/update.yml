@@ -1,0 +1,65 @@
+name: Check vacancies and publish
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: bank-jobs
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: python -m unittest discover -s tests -v
+      - name: Check career sites
+        id: collect
+        continue-on-error: true
+        run: python scripts/update_jobs.py
+      - name: Save results including check failures
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/jobs.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update vacancy feed"
+            git push
+          fi
+      - name: Prepare public page
+        run: |
+          mkdir -p public/data
+          cp index.html public/index.html
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('data/jobs.json').read_text())
+          data.pop('seen', None)
+          data.pop('initialized_sources', None)
+          for day in data['days']:
+              day['errors'] = {name: 'Check failed' for name in day.get('errors', {})}
+          Path('public/data/jobs.json').write_text(json.dumps(data, ensure_ascii=False))
+          PY
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Flag incomplete collection
+        if: steps.collect.outcome == 'failure'
+        run: exit 1
