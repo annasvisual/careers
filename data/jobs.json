@@ -1,1 +1,278 @@
-{"schema_version":1,"seen":{},"days":[],"last_checked":null}
+{
+  "schema_version": 1,
+  "seen": {
+    "Monzo:7343996": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6635595": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8365302": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8245673": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8331328": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8023162": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8264501": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8133342": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8258208": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8336726": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8146871": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7194922": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:5758065": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7825424": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8025854": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:5018066": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8356553": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7904675": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8365296": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8336434": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6369658": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6758088": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8370845": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8288562": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8200681": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355179": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355625": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355488": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355249": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8354936": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7775842": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7966820": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8358652": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8355433": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6674282": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6635837": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8092745": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6180814": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8330467": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6394676": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8336327": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8164092": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8225870": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8225843": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8331241": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7996955": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8365388": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8367351": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8288904": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7732437": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:7861991": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8121253": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6656737": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6036797": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8083280": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6758449": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6656228": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:6636147": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8232732": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8222576": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8172921": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8359155": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    },
+    "Monzo:8356252": {
+      "first_seen": "2026-11-11",
+      "source": "Monzo"
+    }
+  },
+  "days": [
+    {
+      "date": "2026-11-11",
+      "jobs": [],
+      "errors": {
+        "Triodos": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"/job/\\\"]\").first\n",
+        "Lloyds": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"workday-job.\\\"]\").first\n",
+        "Starling": "No readable vacancy cards",
+        "Nationwide": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"link\", name=re.compile(r\"^(?:Next page|Navigate to the next page of the results)$\", re.IGNORECASE)).first\n    - locator resolved to <a aria-label=\"Next page\" href=\"javascript:void(0)\" class=\"btn btn-primary jobs-list-pag",
+        "NatWest": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"/jobs/\\\"]\").first\n"
+      },
+      "baseline_sources": [
+        "Monzo"
+      ],
+      "checked_at": "2026-11-11T09:59:37.689925+00:00"
+    }
+  ],
+  "last_checked": "2026-11-11T09:59:37.689925+00:00",
+  "initialized_sources": [
+    "Monzo"
+  ]
+}
