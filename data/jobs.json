@@ -508,6 +508,22 @@
     "Starling:/j/6E4985765B": {
       "first_seen": "2026-11-11",
       "source": "Starling"
+    },
+    "Monzo:8385203": {
+      "first_seen": "2026-11-13",
+      "source": "Monzo"
+    },
+    "Monzo:8385296": {
+      "first_seen": "2026-11-13",
+      "source": "Monzo"
+    },
+    "Triodos:/job/Medewerker-Klantcontact/1031-en_US": {
+      "first_seen": "2026-11-13",
+      "source": "Triodos"
+    },
+    "Triodos:/job/Group-Content-Marketer/999-en_US": {
+      "first_seen": "2026-11-13",
+      "source": "Triodos"
     }
   },
   "days": [
@@ -520,7 +536,7 @@
         "NatWest": "Career listing returned HTTP 403"
       },
       "baseline_sources": [],
-      "checked_at": "2026-11-13T09:03:39.880120+00:00"
+      "checked_at": "2026-11-13T20:46:34.080303+00:00"
     },
     {
       "date": "2026-11-12",
@@ -549,7 +565,7 @@
       "checked_at": "2026-11-11T21:06:26.336757+00:00"
     }
   ],
-  "last_checked": "2026-11-13T09:03:39.880120+00:00",
+  "last_checked": "2026-11-13T20:46:34.080303+00:00",
   "initialized_sources": [
     "Monzo",
     "Triodos",
@@ -557,7 +573,7 @@
   ],
   "current": {
     "Monzo": {
-      "checked_at": "2026-11-13T09:03:39.880120+00:00",
+      "checked_at": "2026-11-13T20:46:34.080303+00:00",
       "jobs": [
         {
           "source": "Monzo",
@@ -570,11 +586,11 @@
       ]
     },
     "Triodos": {
-      "checked_at": "2026-11-13T09:03:39.880120+00:00",
+      "checked_at": "2026-11-13T20:46:34.080303+00:00",
       "jobs": []
     },
     "Starling": {
-      "checked_at": "2026-11-13T09:03:39.880120+00:00",
+      "checked_at": "2026-11-13T20:46:34.080303+00:00",
       "jobs": []
     }
   }
