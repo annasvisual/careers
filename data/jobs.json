@@ -528,6 +528,17 @@
   },
   "days": [
     {
+      "date": "2026-11-15",
+      "jobs": [],
+      "errors": {
+        "Lloyds": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"workday-job.\\\"]\").first\n",
+        "Nationwide": "No readable vacancy cards",
+        "NatWest": "Career listing returned HTTP 403"
+      },
+      "baseline_sources": [],
+      "checked_at": "2026-11-15T08:48:16.605485+00:00"
+    },
+    {
       "date": "2026-11-14",
       "jobs": [],
       "errors": {
@@ -576,7 +587,7 @@
       "checked_at": "2026-11-11T21:06:26.336757+00:00"
     }
   ],
-  "last_checked": "2026-11-14T23:37:35.529914+00:00",
+  "last_checked": "2026-11-15T08:48:16.605485+00:00",
   "initialized_sources": [
     "Monzo",
     "Triodos",
@@ -584,7 +595,7 @@
   ],
   "current": {
     "Monzo": {
-      "checked_at": "2026-11-14T23:37:35.529914+00:00",
+      "checked_at": "2026-11-15T08:48:16.605485+00:00",
       "jobs": [
         {
           "source": "Monzo",
@@ -597,11 +608,11 @@
       ]
     },
     "Triodos": {
-      "checked_at": "2026-11-14T23:37:35.529914+00:00",
+      "checked_at": "2026-11-15T08:48:16.605485+00:00",
       "jobs": []
     },
     "Starling": {
-      "checked_at": "2026-11-14T23:37:35.529914+00:00",
+      "checked_at": "2026-11-15T08:48:16.605485+00:00",
       "jobs": []
     }
   }
