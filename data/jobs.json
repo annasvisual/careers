@@ -548,9 +548,32 @@
     "Triodos:/job/Senior-Legal-Counsel/987-en_US": {
       "first_seen": "2026-11-16",
       "source": "Triodos"
+    },
+    "Monzo:8393065": {
+      "first_seen": "2026-11-17",
+      "source": "Monzo"
+    },
+    "Monzo:8333519": {
+      "first_seen": "2026-11-17",
+      "source": "Monzo"
+    },
+    "Starling:/j/198B42C624": {
+      "first_seen": "2026-11-17",
+      "source": "Starling"
     }
   },
   "days": [
+    {
+      "date": "2026-11-17",
+      "jobs": [],
+      "errors": {
+        "Lloyds": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"workday-job.\\\"]\").first\n",
+        "Nationwide": "No readable vacancy cards",
+        "NatWest": "Career listing returned HTTP 403"
+      },
+      "baseline_sources": [],
+      "checked_at": "2026-11-17T10:07:08.624171+00:00"
+    },
     {
       "date": "2026-11-16",
       "jobs": [],
@@ -622,7 +645,7 @@
       "checked_at": "2026-11-11T21:06:26.336757+00:00"
     }
   ],
-  "last_checked": "2026-11-16T23:13:16.086512+00:00",
+  "last_checked": "2026-11-17T10:07:08.624171+00:00",
   "initialized_sources": [
     "Monzo",
     "Triodos",
@@ -630,7 +653,7 @@
   ],
   "current": {
     "Monzo": {
-      "checked_at": "2026-11-16T23:13:16.086512+00:00",
+      "checked_at": "2026-11-17T10:07:08.624171+00:00",
       "jobs": [
         {
           "source": "Monzo",
@@ -643,11 +666,11 @@
       ]
     },
     "Triodos": {
-      "checked_at": "2026-11-16T23:13:16.086512+00:00",
+      "checked_at": "2026-11-17T10:07:08.624171+00:00",
       "jobs": []
     },
     "Starling": {
-      "checked_at": "2026-11-16T23:13:16.086512+00:00",
+      "checked_at": "2026-11-17T10:07:08.624171+00:00",
       "jobs": []
     }
   }
