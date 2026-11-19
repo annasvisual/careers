@@ -596,6 +596,14 @@
     "Starling:/j/9689E5A1DA": {
       "first_seen": "2026-11-18",
       "source": "Starling"
+    },
+    "Monzo:8398665": {
+      "first_seen": "2026-11-19",
+      "source": "Monzo"
+    },
+    "Starling:/j/8F9344E8C1": {
+      "first_seen": "2026-11-19",
+      "source": "Starling"
     }
   },
   "days": [
@@ -608,7 +616,7 @@
         "NatWest": "Career listing returned HTTP 403"
       },
       "baseline_sources": [],
-      "checked_at": "2026-11-19T09:56:46.929346+00:00"
+      "checked_at": "2026-11-19T22:03:29.103943+00:00"
     },
     {
       "date": "2026-11-18",
@@ -703,7 +711,7 @@
       "checked_at": "2026-11-11T21:06:26.336757+00:00"
     }
   ],
-  "last_checked": "2026-11-19T09:56:46.929346+00:00",
+  "last_checked": "2026-11-19T22:03:29.103943+00:00",
   "initialized_sources": [
     "Monzo",
     "Triodos",
@@ -711,7 +719,7 @@
   ],
   "current": {
     "Monzo": {
-      "checked_at": "2026-11-19T09:56:46.929346+00:00",
+      "checked_at": "2026-11-19T22:03:29.103943+00:00",
       "jobs": [
         {
           "source": "Monzo",
@@ -724,11 +732,11 @@
       ]
     },
     "Triodos": {
-      "checked_at": "2026-11-19T09:56:46.929346+00:00",
+      "checked_at": "2026-11-19T22:03:29.103943+00:00",
       "jobs": []
     },
     "Starling": {
-      "checked_at": "2026-11-19T09:56:46.929346+00:00",
+      "checked_at": "2026-11-19T22:03:29.103943+00:00",
       "jobs": []
     }
   }
