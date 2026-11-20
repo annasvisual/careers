@@ -604,6 +604,22 @@
     "Starling:/j/8F9344E8C1": {
       "first_seen": "2026-11-19",
       "source": "Starling"
+    },
+    "Monzo:8195253": {
+      "first_seen": "2026-11-20",
+      "source": "Monzo"
+    },
+    "Triodos:/job/Sourcing-Execution-&amp;-Contract-Manager-Procurement/801-en_US": {
+      "first_seen": "2026-11-20",
+      "source": "Triodos"
+    },
+    "Starling:/j/8F601C3D6E": {
+      "first_seen": "2026-11-20",
+      "source": "Starling"
+    },
+    "Starling:/j/CBD59885BD": {
+      "first_seen": "2026-11-20",
+      "source": "Starling"
     }
   },
   "days": [
@@ -616,7 +632,7 @@
         "NatWest": "Career listing returned HTTP 403"
       },
       "baseline_sources": [],
-      "checked_at": "2026-11-20T09:38:04.339263+00:00"
+      "checked_at": "2026-11-20T21:41:55.597554+00:00"
     },
     {
       "date": "2026-11-19",
@@ -722,7 +738,7 @@
       "checked_at": "2026-11-11T21:06:26.336757+00:00"
     }
   ],
-  "last_checked": "2026-11-20T09:38:04.339263+00:00",
+  "last_checked": "2026-11-20T21:41:55.597554+00:00",
   "initialized_sources": [
     "Monzo",
     "Triodos",
@@ -730,7 +746,7 @@
   ],
   "current": {
     "Monzo": {
-      "checked_at": "2026-11-20T09:38:04.339263+00:00",
+      "checked_at": "2026-11-20T21:41:55.597554+00:00",
       "jobs": [
         {
           "source": "Monzo",
@@ -743,11 +759,11 @@
       ]
     },
     "Triodos": {
-      "checked_at": "2026-11-20T09:38:04.339263+00:00",
+      "checked_at": "2026-11-20T21:41:55.597554+00:00",
       "jobs": []
     },
     "Starling": {
-      "checked_at": "2026-11-20T09:38:04.339263+00:00",
+      "checked_at": "2026-11-20T21:41:55.597554+00:00",
       "jobs": []
     }
   }
