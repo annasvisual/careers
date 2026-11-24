@@ -624,9 +624,24 @@
     "Triodos:/job/Product-Manager-Business-Lending-Credit-Risk-Specialisation/1020-en_US": {
       "first_seen": "2026-11-23",
       "source": "Triodos"
+    },
+    "Monzo:8411444": {
+      "first_seen": "2026-11-24",
+      "source": "Monzo"
     }
   },
   "days": [
+    {
+      "date": "2026-11-24",
+      "jobs": [],
+      "errors": {
+        "Lloyds": "Locator.wait_for: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"a[href*=\\\"workday-job.\\\"]\").first\n",
+        "Nationwide": "No readable vacancy cards",
+        "NatWest": "Career listing returned HTTP 403"
+      },
+      "baseline_sources": [],
+      "checked_at": "2026-11-24T01:29:29.308817+00:00"
+    },
     {
       "date": "2026-11-23",
       "jobs": [],
@@ -775,7 +790,7 @@
       "checked_at": "2026-11-11T21:06:26.336757+00:00"
     }
   ],
-  "last_checked": "2026-11-23T10:16:41.826025+00:00",
+  "last_checked": "2026-11-24T01:29:29.308817+00:00",
   "initialized_sources": [
     "Monzo",
     "Triodos",
@@ -783,7 +798,7 @@
   ],
   "current": {
     "Monzo": {
-      "checked_at": "2026-11-23T10:16:41.826025+00:00",
+      "checked_at": "2026-11-24T01:29:29.308817+00:00",
       "jobs": [
         {
           "source": "Monzo",
@@ -796,11 +811,11 @@
       ]
     },
     "Triodos": {
-      "checked_at": "2026-11-23T10:16:41.826025+00:00",
+      "checked_at": "2026-11-24T01:29:29.308817+00:00",
       "jobs": []
     },
     "Starling": {
-      "checked_at": "2026-11-23T10:16:41.826025+00:00",
+      "checked_at": "2026-11-24T01:29:29.308817+00:00",
       "jobs": []
     }
   }
